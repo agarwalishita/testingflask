@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-from flask import Flask, render_template
+from flask import Flask
 app = Flask(__name__)
 @app.route('/')
 def index():
-      return render_template("views/index.html")
+      return "hello"
 @app.route('/<int:id>')
 def number(id):
       return '<h1>You Entered: {0}<h1/>'.format(id)
