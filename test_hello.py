@@ -6,6 +6,6 @@ def client():
     client = app.test_client()
     yield client
 
-def testid(client):
+def test_hello(client):
    response=client.get("/")
    assert b'Hello' in response.data
